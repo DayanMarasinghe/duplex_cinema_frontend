@@ -1,7 +1,6 @@
-import axios from "axios";
 import React, {Component} from "react";
 
-class Movieview extends Component{
+class Home extends Component{
 
     constructor(props){
         super(props);
@@ -50,4 +49,4 @@ class Movieview extends Component{
 
 }
 
-export default Movieview
+export default Home;
