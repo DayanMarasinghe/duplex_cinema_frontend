@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { Component } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Register extends Component{
 
@@ -34,33 +35,52 @@ handleSubmit =(e) =>{
         const{username,password,email,phone} = this.state
 
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <div>
-                        <label>UserName</label>
-                        <input type='text' name='username' value={username} onChange={this.handleChange}></input>
-                    </div>
-                    <div>
-                        <label>Password</label>
-                        <input type='password' name='password' value={password} onChange={this.handleChange}></input>
-                    </div>
-                    <div>
-                        <label>Confirm Password</label>
-                        <input type='password'></input>
-                    </div>
-                    <div>
-                        <label>E-Mail</label>
-                        <input type='text' name='email' value={email} onChange={this.handleChange}></input>
-                    </div>
-                    <div>
-                        <label>Phone</label>
-                        <input type='text' name='phone' value={phone} onChange={this.handleChange}></input>
-                    </div>
-                    <div>
-                        <button type='submit'>Register</button>
-                    </div>
-                </form>
-            </div>
+        <div className="container">
+            <form onSubmit={this.handleSubmit}>
+            <div class="form-group">
+                    <label for="username">UserName</label>
+                    <input type='text' class="form-control" name='username' value={username} onChange={this.handleChange}></input>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type='password' class="form-control" name='password' value={password} onChange={this.handleChange}></input>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type='text' class="form-control" name='email' value={email} onChange={this.handleChange}></input>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type='text' class="form-control" name='phone' value={phone} onChange={this.handleChange}></input>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>    
+                // <form onSubmit={this.handleSubmit}>
+                //     <Form.Group className="mb-3">
+                //     <div>
+                //         <Form.Label>UserName</Form.Label>
+                //         <input type='text' name='username' value={username} onChange={this.handleChange}></input>
+                //     </div>
+                //     </Form.Group>
+                //     <div>
+                //         <label>Password</label>
+                //         <input type='password' name='password' value={password} onChange={this.handleChange}></input>
+                //     </div>
+                //     <div>
+                //         <label>E-Mail</label>
+                //         <input type='text' name='email' value={email} onChange={this.handleChange}></input>
+                //     </div>
+                //     <div>
+                //         <label>Phone</label>
+                //         <input type='text' name='phone' value={phone} onChange={this.handleChange}></input>
+                //     </div>
+                //     <div>
+                //         <button type='submit'>Register</button>
+                //     </div>
+                // </form>
+            
         )
     }
 }
