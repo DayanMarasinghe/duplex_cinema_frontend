@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { Component } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-class Login extends Component{
+class CustomerLogin extends Component{
 
     render(){
 
@@ -24,4 +24,4 @@ class Login extends Component{
     }
 }
 
-export default Login
+export default CustomerLogin;

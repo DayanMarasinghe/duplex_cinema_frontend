@@ -5,10 +5,9 @@ import {Link,
   Route
 } from "react-router-dom";
 import Home from './components/Home';
-import Register from './components/Register';
-import Login from './components/Login'
+import CustomerRegister from './components/CustomerRegister';
+import CustomerLogin from './components/CustomerLogin'
 import Contactus from './components/Contactus';
-import Userlogin from './components/Userlogin';
 import { BrowserRouter as Router } from 'react-router-dom';
 import logo from './assets/duplex.png';
 
@@ -36,8 +35,8 @@ function App() {
         
           <Routes>
             <Route path="/contactus" element={<Contactus />}></Route>
-            <Route path="/userlogin" element={<Login />}></Route>
-            <Route path="/usersignup" element={<Register />}></Route>
+            <Route path="/userlogin" element={<CustomerLogin />}></Route>
+          <Route path="/usersignup" element={<CustomerRegister />}></Route>
             <Route exact path='/' element={<Home></Home>}></Route>
           </Routes>
         

@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { Component } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-class Register extends Component{
+class CustomerRegister extends Component{
 
 constructor(props){
     super(props)
@@ -85,4 +85,4 @@ handleSubmit =(e) =>{
     }
 }
 
-export default Register
+export default CustomerRegister;
