@@ -39,19 +39,19 @@ handleSubmit =(e) =>{
             <form onSubmit={this.handleSubmit}>
             <div class="form-group">
                     <label for="username">UserName</label>
-                    <input type='text' class="form-control" name='username' value={username} onChange={this.handleChange}></input>
+                    <input type='text' class="form-control" name='username' value={username} onChange={this.handleChange} required></input>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type='password' class="form-control" name='password' value={password} onChange={this.handleChange}></input>
+                    <input type='password' class="form-control" name='password' value={password} onChange={this.handleChange} required></input>
                 </div>
                 <div class="form-group">
                     <label for="email">Email address</label>
-                    <input type='text' class="form-control" name='email' value={email} onChange={this.handleChange}></input>
+                    <input type='text' class="form-control" name='email' value={email} onChange={this.handleChange} required></input>
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone</label>
-                    <input type='text' class="form-control" name='phone' value={phone} onChange={this.handleChange}></input>
+                    <input type='text' class="form-control" name='phone' value={phone} onChange={this.handleChange} required></input>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
