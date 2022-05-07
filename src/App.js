@@ -5,10 +5,9 @@ import {Link,
   Route
 } from "react-router-dom";
 import Home from './components/Home';
-import Register from './components/Register';
-import Login from './components/Login'
+import Register from './components/CustomerRegister';
+import Login from './components/CustomerLogin'
 import Contactus from './components/Contactus';
-import Userlogin from './components/Userlogin';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
