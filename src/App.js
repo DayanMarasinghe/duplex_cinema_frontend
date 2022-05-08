@@ -10,6 +10,8 @@ import CustomerLogin from './components/CustomerLogin'
 import Contactus from './components/Contactus';
 import { BrowserRouter as Router } from 'react-router-dom';
 import logo from './assets/duplex.png';
+import MovieadminDashboard from './components/Movieadmindashboard';
+import  Addmovie  from './components/Addmovies';
 
 function App() {
   return (
@@ -36,8 +38,10 @@ function App() {
           <Routes>
             <Route path="/contactus" element={<Contactus />}></Route>
             <Route path="/userlogin" element={<CustomerLogin />}></Route>
-          <Route path="/usersignup" element={<CustomerRegister />}></Route>
+            <Route path="/usersignup" element={<CustomerRegister />}></Route>
             <Route exact path='/' element={<Home></Home>}></Route>
+            <Route path="/movieadmindashboard" element={<MovieadminDashboard></MovieadminDashboard>}></Route>
+            <Route path="/addmovie" element={<Addmovie></Addmovie>}></Route>
           </Routes>
         
       
@@ -57,8 +61,8 @@ function App() {
                   <h5 class="widget-title">Admin Portal<span></span></h5>
                     <Button variant="warning"
                       as={Link}
-                      to="/userlogin">
-                      Login as Admin
+                      to="/movieadmindashboard">
+                      Movieadmin Dashboard
                     </Button>
                 </div>
               </div>
