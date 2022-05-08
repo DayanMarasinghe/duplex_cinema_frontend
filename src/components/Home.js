@@ -36,9 +36,6 @@ class Home extends Component{
                             Description : {movielist.description},
                             Theme: {movielist.theme},
                             Director: {movielist.director},
-                            {movielist.actors.map((actorslist) => (
-                                <p>Name: {actorslist.name}<br></br>Role: {actorslist.role}</p>
-                            ))}
                             IMDB: {movielist.imdb}
                         </ol>
                     ))
