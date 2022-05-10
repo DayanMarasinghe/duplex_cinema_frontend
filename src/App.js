@@ -12,6 +12,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import logo from './assets/duplex.png';
 import MovieadminDashboard from './components/Movieadmindashboard';
 import  Addmovie  from './components/Addmovies';
+import Addshowtime from './components/Addshowtime';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
             <Route exact path='/' element={<Home></Home>}></Route>
             <Route path="/movieadmindashboard" element={<MovieadminDashboard></MovieadminDashboard>}></Route>
             <Route path="/addmovie" element={<Addmovie></Addmovie>}></Route>
+            <Route path="/addshowtime" element={<Addshowtime></Addshowtime>}></Route>
           </Routes>
         
       
