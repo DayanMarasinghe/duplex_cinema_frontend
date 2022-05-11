@@ -13,6 +13,7 @@ import logo from './assets/duplex.png';
 import MovieadminDashboard from './components/Movieadmindashboard';
 import  Addmovie  from './components/Addmovies';
 import Addshowtime from './components/Addshowtime';
+import Adminpivot from './components/Adminpivot';
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
             <Route path="/movieadmindashboard" element={<MovieadminDashboard></MovieadminDashboard>}></Route>
             <Route path="/addmovie" element={<Addmovie></Addmovie>}></Route>
             <Route path="/addshowtime" element={<Addshowtime></Addshowtime>}></Route>
+            <Route path="/adminpivot" element={<Adminpivot></Adminpivot>}></Route>
           </Routes>
         
       
@@ -63,8 +65,8 @@ function App() {
                   <h5 class="widget-title">Admin Portal<span></span></h5>
                     <Button variant="warning"
                       as={Link}
-                      to="/movieadmindashboard">
-                      Movieadmin Dashboard
+                      to="/adminpivot">
+                      Login as Admin
                     </Button>
                 </div>
               </div>
