@@ -57,7 +57,7 @@ class Addmovie extends Component{
                         <input type='text' className="form-control" name='director' value={director} onChange={this.handleChange} required></input>
                     </div>
                     <div class="form-group">
-                        <label for="director">IMDB rating: </label>
+                        <label for="imdb">IMDB rating: </label>
                         <input type='text' className="form-control" name='imdb' value={imdb} onChange={this.handleChange} required></input>
                     </div>
                     <button type="submit" class="btn btn-primary">Add Movie</button>
