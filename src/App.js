@@ -14,6 +14,7 @@ import MovieadminDashboard from './components/Movieadmindashboard';
 import  Addmovie  from './components/Addmovies';
 import Addshowtime from './components/Addshowtime';
 import Adminpivot from './components/Adminpivot';
+import Movieedit from './components/Movieedit';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
             <Route path="/addmovie" element={<Addmovie></Addmovie>}></Route>
             <Route path="/addshowtime" element={<Addshowtime></Addshowtime>}></Route>
             <Route path="/adminpivot" element={<Adminpivot></Adminpivot>}></Route>
+            <Route path="/movieedit" element={<Movieedit></Movieedit>}></Route>
           </Routes>
         
       
