@@ -1,6 +1,6 @@
 import React from "react";
 
-const Readonlymovie = ({ movielist, handleEditClick}) => {
+const Readonlymovie = ({ movielist, handleEditClick, handleMovieDelete}) => {
 
     return(
         <tr>
@@ -15,6 +15,12 @@ const Readonlymovie = ({ movielist, handleEditClick}) => {
                     onClick={(event) => handleEditClick(event, movielist)}
                 >
                 Edit
+                </button>
+                <button
+                    type="button"
+                    onClick={() => handleMovieDelete(movielist._id)}
+                >
+                Delete
                 </button>
             </td>
         </tr>

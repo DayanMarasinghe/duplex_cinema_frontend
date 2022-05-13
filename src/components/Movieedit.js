@@ -109,6 +109,32 @@ function Movieedit(){
         setEditMovieID(null);
     }
 
+    //movie delete event
+    const handleMovieDelete = (movieId) => {
+        const newMovies = [...movies];
+
+        //axios call to delete the movie
+        axios.delete(`http://localhost:4000/movies/${movieId}`)
+            .then(response => {
+                console.log(response);
+                alert("Movie deleted!")
+
+                //get the index of the given movie
+                const index = movies.findIndex((movielist) => movielist._id === movieId);
+
+                //pass the index and how many elements to be deleted
+                newMovies.splice(index, 1);
+
+                setMovies(newMovies);
+            })
+            .catch(error => {
+                console.error(error);
+                alert("An error occured")
+            })
+
+        
+    }
+
     return(
         <div>
             <h1 align="center">Movie information</h1>
@@ -138,6 +164,7 @@ function Movieedit(){
                                         <Readonlymovie 
                                             movielist={movielist} 
                                             handleEditClick={handleEditClick}
+                                            handleMovieDelete={handleMovieDelete}
                                         />
                                     )}
                                 </Fragment>
