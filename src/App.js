@@ -11,6 +11,11 @@ import CustomerLogin from './components/CustomerLogin'
 import Contactus from './components/Contactus';
 import { BrowserRouter as Router } from 'react-router-dom';
 import logo from './assets/duplex.png';
+import MovieadminDashboard from './components/Movieadmindashboard';
+import  Addmovie  from './components/Addmovies';
+import Addshowtime from './components/Addshowtime';
+import Adminpivot from './components/Adminpivot';
+import Movieedit from './components/Movieedit';
 
 function App() {
   return (
@@ -41,8 +46,15 @@ function App() {
             <Route path="/contactus" element={<Contactus />}></Route>
             <Route path="/userlogin" element={<CustomerLogin />}></Route>
             <Route path="/usersignup" element={<CustomerRegister />}></Route>
+
             <Route path="/cart" element={<Cart />}></Route>
+
             <Route exact path='/' element={<Home></Home>}></Route>
+            <Route path="/movieadmindashboard" element={<MovieadminDashboard></MovieadminDashboard>}></Route>
+            <Route path="/addmovie" element={<Addmovie></Addmovie>}></Route>
+            <Route path="/addshowtime" element={<Addshowtime></Addshowtime>}></Route>
+            <Route path="/adminpivot" element={<Adminpivot></Adminpivot>}></Route>
+            <Route path="/movieedit" element={<Movieedit></Movieedit>}></Route>
           </Routes>
         
       
@@ -62,7 +74,7 @@ function App() {
                   <h5 class="widget-title">Admin Portal<span></span></h5>
                     <Button variant="warning"
                       as={Link}
-                      to="/userlogin">
+                      to="/adminpivot">
                       Login as Admin
                     </Button>
                 </div>
