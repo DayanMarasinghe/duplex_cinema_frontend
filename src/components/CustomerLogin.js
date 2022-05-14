@@ -6,7 +6,8 @@ class CustomerLogin extends Component{
     render(){
 
         return(
-            <div className="container">
+            <div className="container" style={{width: 500}}>
+                <br></br>
             <form>
                 <div class="mb-3">
                     <label for="username" class="form-label">UserName</label>
@@ -18,6 +19,7 @@ class CustomerLogin extends Component{
                 </div>
                 <button type="submit" class="btn btn-primary">Login</button>
             </form>
+            <br></br>
             </div>
         )
     }

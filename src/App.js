@@ -5,6 +5,7 @@ import {Link,
   Route
 } from "react-router-dom";
 import Home from './components/Home';
+import Cart from './components/Cart';
 import CustomerRegister from './components/CustomerRegister';
 import CustomerLogin from './components/CustomerLogin'
 import Contactus from './components/Contactus';
@@ -34,6 +35,9 @@ function App() {
               <Nav.Link as={Link} to="/usersignup">
                 Sign up
               </Nav.Link>
+              <Nav.Link as={Link} to="/cart">
+                Cart
+              </Nav.Link>
             </Nav>
           </Container>
         </Navbar>
@@ -42,6 +46,9 @@ function App() {
             <Route path="/contactus" element={<Contactus />}></Route>
             <Route path="/userlogin" element={<CustomerLogin />}></Route>
             <Route path="/usersignup" element={<CustomerRegister />}></Route>
+
+            <Route path="/cart" element={<Cart />}></Route>
+
             <Route exact path='/' element={<Home></Home>}></Route>
             <Route path="/movieadmindashboard" element={<MovieadminDashboard></MovieadminDashboard>}></Route>
             <Route path="/addmovie" element={<Addmovie></Addmovie>}></Route>
