@@ -16,6 +16,8 @@ import  Addmovie  from './components/Addmovies';
 import Addshowtime from './components/Addshowtime';
 import Adminpivot from './components/Adminpivot';
 import Movieedit from './components/Movieedit';
+import Movieview from './components/Movieview';
+import Showtimeview from './components/Showtimeview';
 
 function App() {
   return (
@@ -55,6 +57,8 @@ function App() {
             <Route path="/addshowtime" element={<Addshowtime></Addshowtime>}></Route>
             <Route path="/adminpivot" element={<Adminpivot></Adminpivot>}></Route>
             <Route path="/movieedit" element={<Movieedit></Movieedit>}></Route>
+            <Route path='/movieview' element={<Movieview></Movieview>}></Route>
+            <Route path='/showtimes' element={<Showtimeview></Showtimeview>}></Route>
           </Routes>
         
       
@@ -76,6 +80,11 @@ function App() {
                       as={Link}
                       to="/adminpivot">
                       Login as Admin
+                    </Button>
+                    <Button variant="warning"
+                      as={Link}
+                      to="/movieview">
+                      Movie view
                     </Button>
                 </div>
               </div>

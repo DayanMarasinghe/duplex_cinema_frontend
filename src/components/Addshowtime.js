@@ -10,7 +10,8 @@ class Addshowtime extends Component{
             moviename:'',
             theater:'',
             date:'',
-            showtime:''
+            showtime:'',
+            ticketprice:''
         }
     }
 
@@ -35,7 +36,7 @@ class Addshowtime extends Component{
 
     render() {
 
-        const { moviename, theater, date, showtime } = this.state;
+        const { moviename, theater, date, showtime, ticketprice } = this.state;
 
         return (
             <div className="container">            
@@ -55,6 +56,10 @@ class Addshowtime extends Component{
                     <div className="form-group">
                         <label for="showtime">Showtime: </label>
                         <input type="time" className="form-control" name="showtime" value={showtime} onChange={this.handleChange} required></input>
+                    </div>
+                    <div className="form-group">
+                        <label for="ticketprice">Ticket Price: </label>
+                        <input type="number" className="form-control" name="ticketprice" value={ticketprice} onChange={this.handleChange} required></input>
                     </div>
                     <button type="submit" class="btn btn-primary">Add Showtime</button>
                 </form>
