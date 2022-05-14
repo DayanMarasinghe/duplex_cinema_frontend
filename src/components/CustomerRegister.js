@@ -31,12 +31,17 @@ handleSubmit =(e) =>{
     })
 }
 
+clearAll = () => { 
+    document.getElementById("regForm").reset();
+  }
+
     render(){
         const{username,password,email,phone} = this.state
 
         return (
-        <div className="container">
-            <form onSubmit={this.handleSubmit}>
+        <div className="container" style={{width: 500}}>
+            <form id="regForm" onSubmit={this.handleSubmit}>
+                <br></br>
             <div class="form-group">
                     <label for="username">UserName</label>
                     <input type='text' class="form-control" name='username' value={username} onChange={this.handleChange} required></input>
@@ -53,33 +58,14 @@ handleSubmit =(e) =>{
                     <label for="phone">Phone</label>
                     <input type='text' class="form-control" name='phone' value={phone} onChange={this.handleChange} required></input>
                 </div>
-
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <br></br>
+                <button type="submit" class="btn btn-primary" style={{width: 250}}>Submit</button>
+                <button type="submit" class="btn btn-danger" style={{width: 200}} onClick={()=>this.clearAll()}>Clear All</button>
             </form>
+
+            <br></br>
         </div>    
-                // <form onSubmit={this.handleSubmit}>
-                //     <Form.Group className="mb-3">
-                //     <div>
-                //         <Form.Label>UserName</Form.Label>
-                //         <input type='text' name='username' value={username} onChange={this.handleChange}></input>
-                //     </div>
-                //     </Form.Group>
-                //     <div>
-                //         <label>Password</label>
-                //         <input type='password' name='password' value={password} onChange={this.handleChange}></input>
-                //     </div>
-                //     <div>
-                //         <label>E-Mail</label>
-                //         <input type='text' name='email' value={email} onChange={this.handleChange}></input>
-                //     </div>
-                //     <div>
-                //         <label>Phone</label>
-                //         <input type='text' name='phone' value={phone} onChange={this.handleChange}></input>
-                //     </div>
-                //     <div>
-                //         <button type='submit'>Register</button>
-                //     </div>
-                // </form>
+
             
         )
     }
