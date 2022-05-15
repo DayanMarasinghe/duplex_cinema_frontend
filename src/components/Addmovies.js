@@ -11,7 +11,8 @@ class Addmovie extends Component{
             description:'',
             theme:'',
             director:'',
-            imdb:''
+            imdb:'',
+            bannerurl:'',
         }
     }
 
@@ -35,7 +36,7 @@ class Addmovie extends Component{
     }
 
     render(){
-        const {name, description, theme, director, imdb} = this.state;
+        const { name, description, theme, director, imdb, bannerurl} = this.state;
 
         return(
             <div className="container">
@@ -59,6 +60,10 @@ class Addmovie extends Component{
                     <div class="form-group">
                         <label for="imdb">IMDB rating: </label>
                         <input type='text' className="form-control" name='imdb' value={imdb} onChange={this.handleChange} required></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="bannerurl">Banner URL: </label>
+                        <input type='text' className="form-control" name='bannerurl' value={bannerurl} onChange={this.handleChange} required></input>
                     </div>
                     <button type="submit" class="btn btn-primary">Add Movie</button>
                 </form>

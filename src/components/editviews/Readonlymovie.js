@@ -10,6 +10,9 @@ const Readonlymovie = ({ movielist, handleEditClick, handleMovieDelete}) => {
             <td>{movielist.director}</td>
             <td>{movielist.imdb}</td>
             <td>
+                <img src={movielist.bannerurl} alt="banner"></img>
+            </td>
+            <td>
                 <button 
                     type="button" 
                     onClick={(event) => handleEditClick(event, movielist)}

@@ -18,6 +18,7 @@ function Movieedit(){
         theme: '',
         director: '',
         imdb: '',
+        bannerurl:'',
     });
 
     //fetch current movies 
@@ -40,6 +41,7 @@ function Movieedit(){
             theme: movielist.theme,
             director: movielist.director,
             imdb: movielist.imdb,
+            bannerurl: movielist.bannerurl
         };
 
         setEditMovieFormData(formValues)
@@ -73,6 +75,7 @@ function Movieedit(){
             theme: editMovieFormData.theme,
             director: editMovieFormData.director,
             imdb: editMovieFormData.imdb,
+            bannerurl: editMovieFormData.bannerurl
         }
 
         const moviePatch = {
@@ -80,7 +83,8 @@ function Movieedit(){
             description: editMovieFormData.description,
             theme: editMovieFormData.theme,
             director: editMovieFormData.director,
-            imdb: editMovieFormData.imdb
+            imdb: editMovieFormData.imdb,
+            bannerurl: editMovieFormData.bannerurl
         }
 
         const newMovies = [...movies];
@@ -147,6 +151,7 @@ function Movieedit(){
                             <th>Theme</th>
                             <th>Director</th>
                             <th>IMDB</th>
+                            <th>BannerURL</th>
                             <th>Actions</th>
                         </tr>
                     </thead>

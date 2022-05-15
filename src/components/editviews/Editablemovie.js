@@ -56,6 +56,16 @@ const Editablemovie = ({ editMovieFormData, handleEditMovieForm, handleUpdateCan
                 ></input>
             </td>
             <td>
+                <input
+                    type="text"
+                    name="bannerurl"
+                    placeholder="Enter banner URL"
+                    required="required"
+                    value={editMovieFormData.bannerurl}
+                    onChange={handleEditMovieForm}
+                ></input>
+            </td>
+            <td>
                 <button type="submit">Update</button>
                 <button type="button" onClick={handleUpdateCancel}>Cancel</button>
             </td>
