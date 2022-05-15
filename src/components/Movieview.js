@@ -24,6 +24,7 @@ function Movieview(){
                         <th>Theme</th>
                         <th>Director</th>
                         <th>IMDB</th>
+                        <th>Banner</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -36,6 +37,9 @@ function Movieview(){
                                 <td>{movielist.theme}</td>
                                 <td>{movielist.director}</td>
                                 <td>{movielist.imdb}</td>
+                                <td>
+                                    <img src={movielist.bannerurl} alt="banner"></img>
+                                </td>
                                 <td>
                                     <Link 
                                         className="btn btn-primary"
