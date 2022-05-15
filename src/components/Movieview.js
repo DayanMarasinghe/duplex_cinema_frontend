@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBCardSubTitle } from 'mdb-react-ui-kit';
 import { Link } from "react-router-dom";
 
 function Movieview(){
@@ -16,44 +17,35 @@ function Movieview(){
 
     return(
         <div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Moviename </th>
-                        <th>Description </th>
-                        <th>Theme</th>
-                        <th>Director</th>
-                        <th>IMDB</th>
-                        <th>Banner</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        movies.map((movielist) => (
-                            <tr>
-                                <td>{movielist.name}</td>
-                                <td>{movielist.description}</td>
-                                <td>{movielist.theme}</td>
-                                <td>{movielist.director}</td>
-                                <td>{movielist.imdb}</td>
-                                <td>
-                                    <img src={movielist.bannerurl} alt="banner" width="40%" height="40%"></img>
-                                </td>
-                                <td>
-                                    <Link 
+            <h1>Now showing..</h1>
+            <MDBRow className='row-cols-1 row-cols-md-3 g-4'>
+                {
+                    movies.map((movielist) => (
+                        <MDBCol>
+                            <MDBCard className='h-100' key={movielist._id}>
+                                <MDBCardImage
+                                    src={movielist.bannerurl}
+                                    position="top"
+                                ></MDBCardImage>
+                                <MDBCardBody>
+                                    <MDBCardTitle>{movielist.name}</MDBCardTitle>
+                                    <MDBCardText>{movielist.description}</MDBCardText>
+                                    <MDBCardSubTitle>Theme : {movielist.theme}</MDBCardSubTitle>
+                                    <MDBCardSubTitle>Movie by : {movielist.director}</MDBCardSubTitle>
+                                    <MDBCardSubTitle>IMDB : {movielist.imdb}/10</MDBCardSubTitle>
+                                    <Link
                                         className="btn btn-primary"
                                         to='/showtimes'
-                                        state={{moviename: movielist.name}}
+                                        state={{ moviename: movielist.name }}
                                     >
-                                    View showtimes
+                                        View showtimes
                                     </Link>
-                                </td>
-                            </tr>
-                        ))
-                    }
-                </tbody>
-            </table>
+                                </MDBCardBody>
+                            </MDBCard>
+                        </MDBCol>
+                    ))
+                }
+            </MDBRow>
         </div>
     )
 
