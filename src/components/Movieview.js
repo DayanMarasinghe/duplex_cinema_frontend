@@ -38,7 +38,7 @@ function Movieview(){
                                 <td>{movielist.director}</td>
                                 <td>{movielist.imdb}</td>
                                 <td>
-                                    <img src={movielist.bannerurl} alt="banner"></img>
+                                    <img src={movielist.bannerurl} alt="banner" width="40%" height="40%"></img>
                                 </td>
                                 <td>
                                     <Link 
