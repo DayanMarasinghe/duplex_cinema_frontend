@@ -23,7 +23,7 @@ class MovieadminDashboard extends Component{
                             <Card.Text>
                                 View current movies
                             </Card.Text>
-                            <Card.Link href="#">View movies</Card.Link>
+                            <Card.Link href="/movieedit">View movies</Card.Link>
                         </Card.Body>
                     </Card>
                     <Card style={{ width: '18rem' }}>
@@ -32,7 +32,7 @@ class MovieadminDashboard extends Component{
                             <Card.Text>
                                 Add showtimes
                             </Card.Text>
-                            <Card.Link href="#">Add showtimes</Card.Link>
+                            <Card.Link as={Link} to="/addshowtime">Add showtimes</Card.Link>
                         </Card.Body>
                     </Card>
                 </CardGroup>

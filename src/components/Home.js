@@ -37,6 +37,7 @@ class Home extends Component{
                             Theme: {movielist.theme},
                             Director: {movielist.director},
                             IMDB: {movielist.imdb}
+                            <img src={movielist.bannerurl} alt="banner"></img>
                         </ol>
                     ))
                 }
