@@ -1,4 +1,7 @@
 import React, {Component} from "react";
+import { MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBCardSubTitle } from 'mdb-react-ui-kit';
+import { Link } from "react-router-dom";
+import {Button} from 'react-bootstrap';
 
 class Home extends Component{
 
@@ -29,22 +32,41 @@ class Home extends Component{
 
         return(
             <div className="App">
-                <h1>Fetch data from an API</h1> {
-                    movies.map((movielist) => (
-                        <ol key={movielist._id}>
-                            Moviename : {movielist.name},
-                            Description : {movielist.description},
-                            Theme: {movielist.theme},
-                            Director: {movielist.director},
-                            IMDB: {movielist.imdb}
-                            <img src={movielist.bannerurl} alt="banner"></img>
-                        </ol>
-                    ))
-                }
+                <h1>Now showing</h1>
+                <MDBRow className='row-cols-1 row-cols-md-3 g-4'>
+                        {
+                            movies.map((movielist) => (
+                                <MDBCol>
+                                    <MDBCard className='h-100' key={movielist._id}>
+                                        <MDBCardImage
+                                            src={movielist.bannerurl}
+                                            position="top"
+                                        ></MDBCardImage>
+                                        <MDBCardBody>
+                                            <MDBCardTitle>{movielist.name}</MDBCardTitle>
+                                            <MDBCardText>{movielist.description}</MDBCardText>
+                                            <MDBCardSubTitle>Theme : {movielist.theme}</MDBCardSubTitle>
+                                            <MDBCardSubTitle>Movie by : {movielist.director}</MDBCardSubTitle>
+                                            <MDBCardSubTitle>IMDB : {movielist.imdb}/10</MDBCardSubTitle>
+                                            <Button variant="warning"
+                                                as={Link}
+                                                to="/userlogin">
+                                                Showtimes
+                                            </Button>
+                                        </MDBCardBody>
+                                    </MDBCard>
+                                </MDBCol>
+                                
+                            ))
+                        }
+                </MDBRow>
+                    
+
             </div>
         );
     }
 
 }
+
 
 export default Home;
