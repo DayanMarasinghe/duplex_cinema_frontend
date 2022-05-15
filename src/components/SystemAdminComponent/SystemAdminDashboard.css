@@ -1,0 +1,9 @@
+.containers{
+    display: flex;
+    width: auto;
+}
+
+.others{
+    flex: 4;
+    
+}

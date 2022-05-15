@@ -13,6 +13,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import logo from './assets/duplex.png';
 import MovieadminDashboard from './components/Movieadmindashboard';
 import  Addmovie  from './components/Addmovies';
+//import systemAdminDashboard from './components/SystemAdminComponent/SystemAdminDashboard';
+import SystemAdminDashboard from './components/SystemAdminComponent/SystemAdminDashboard';
 import Addshowtime from './components/Addshowtime';
 import Adminpivot from './components/Adminpivot';
 import Movieedit from './components/Movieedit';
@@ -54,6 +56,8 @@ function App() {
             <Route exact path='/' element={<Home></Home>}></Route>
             <Route path="/movieadmindashboard" element={<MovieadminDashboard></MovieadminDashboard>}></Route>
             <Route path="/addmovie" element={<Addmovie></Addmovie>}></Route>
+            <Route path="/systemadmindashboard" element={<SystemAdminDashboard></SystemAdminDashboard>}></Route>
+            
             <Route path="/addshowtime" element={<Addshowtime></Addshowtime>}></Route>
             <Route path="/adminpivot" element={<Adminpivot></Adminpivot>}></Route>
             <Route path="/movieedit" element={<Movieedit></Movieedit>}></Route>
@@ -87,6 +91,16 @@ function App() {
                       Movie view
                     </Button>
                 </div>
+
+                <div class="widget no-box">
+                  <h5 class="widget-title">Admin Portal<span></span></h5>
+                    <Button variant="warning"
+                      as={Link}
+                      to="/systemadmindashboard">
+                      System Admin Dashboard
+                    </Button>
+                </div>
+                
               </div>
               <div class="col-xs-12 col-sm-6 col-md-3">
                 <div class="widget no-box">
