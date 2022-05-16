@@ -25,7 +25,7 @@ class Adminpivot extends Component{
                             <Card.Text>
                                 Login as Movie admin
                             </Card.Text>
-                            <Card.Link as={Link} to="/movieadmindashboard">Login</Card.Link>
+                            <Card.Link as={Link} to="/madminlogin">Login</Card.Link>
                         </Card.Body>
                     </Card>
                 </CardGroup>
