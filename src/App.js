@@ -20,6 +20,7 @@ import Adminpivot from './components/Adminpivot';
 import Movieedit from './components/Movieedit';
 import Movieview from './components/Movieview';
 import Showtimeview from './components/Showtimeview';
+import MAdminlogin from './components/MAdminlogin';
 
 function App() {
   return (
@@ -63,6 +64,7 @@ function App() {
             <Route path="/movieedit" element={<Movieedit></Movieedit>}></Route>
             <Route path='/movieview' element={<Movieview></Movieview>}></Route>
             <Route path='/showtimes' element={<Showtimeview></Showtimeview>}></Route>
+            <Route path='/madminlogin' element={<MAdminlogin></MAdminlogin>}></Route>
           </Routes>
         
       
