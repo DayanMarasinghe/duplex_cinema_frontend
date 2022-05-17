@@ -40,7 +40,9 @@ class Addshowtime extends Component{
         const { moviename, theater, date, showtime, ticketprice } = this.state;
 
         return (
-            <div className="container">            
+            <div className="container" style={{ width: 850, borderBlockStyle: "solid", borderLeftStyle: "solid", borderRightStyle: "solid", marginTop: 10, borderBlockWidth: "thin", borderLeftWidth: "thin", borderRightWidth: "thin" }}>            
+                <br></br>
+                <h3 style={{ paddingLeft: 290 }}>Enter showtime details</h3>
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <label for="moviename">Movie name: </label>
@@ -58,12 +60,13 @@ class Addshowtime extends Component{
                         <label for="showtime">Showtime: </label>
                         <input type="time" className="form-control" name="showtime" value={showtime} onChange={this.handleChange} required></input>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group" style={{ 'marginBottom': '20px' }}>
                         <label for="ticketprice">Ticket Price: </label>
                         <input type="number" className="form-control" name="ticketprice" value={ticketprice} onChange={this.handleChange} required></input>
                     </div>
-                    <button type="submit" class="btn btn-primary">Add Showtime</button>
+                    <button type="submit" class="btn btn-warning">Add Showtime</button>
                 </form>
+                <br></br>
             </div>
         );
     }

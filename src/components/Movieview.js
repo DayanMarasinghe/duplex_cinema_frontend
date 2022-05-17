@@ -32,9 +32,9 @@ function Movieview(){
                                     <MDBCardText>{movielist.description}</MDBCardText>
                                     <MDBCardSubTitle>Theme : {movielist.theme}</MDBCardSubTitle>
                                     <MDBCardSubTitle>Movie by : {movielist.director}</MDBCardSubTitle>
-                                    <MDBCardSubTitle>IMDB : {movielist.imdb}/10</MDBCardSubTitle>
+                                    <MDBCardSubTitle style={{'paddingBottom':'20px'}}>IMDB : {movielist.imdb}/10</MDBCardSubTitle>
                                     <Link
-                                        className="btn btn-primary"
+                                        className="btn btn-warning"
                                         to='/showtimes'
                                         state={{ moviename: movielist.name }}
                                     >
