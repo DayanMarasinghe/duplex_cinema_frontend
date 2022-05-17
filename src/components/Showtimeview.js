@@ -18,6 +18,10 @@ function Showtimeview(){
             .then(resp => {
                 setShowtimes(resp)
             })
+            .catch(error=>{
+                alert("No showtimes for ", {moviename});
+                window.location.href ='/movieview';
+            })
     })
 
     return(
@@ -29,13 +33,13 @@ function Showtimeview(){
                             <MDBCol>
                                 <MDBCard className="h-100" key={showtimelist._id}>
                                     <MDBCardBody>
-                                        <MDBCardTitle>{showtimelist.theater} Theater</MDBCardTitle>
-                                        <MDBCardSubTitle>Date : {showtimelist.date}</MDBCardSubTitle>
-                                        <MDBCardSubTitle>Showtime : {showtimelist.showtime}</MDBCardSubTitle>
-                                        <MDBCardSubTitle>Ticket Price : {showtimelist.ticketprice}</MDBCardSubTitle>
+                                        <MDBCardTitle style={{'marginBottom':'10px'}}><b>{showtimelist.theater} Theater</b></MDBCardTitle>
+                                        <MDBCardSubTitle style={{ 'marginBottom': '5px'}}>Date : {showtimelist.date}</MDBCardSubTitle>
+                                        <MDBCardSubTitle style={{ 'marginBottom': '5px' }}>Showtime : {showtimelist.showtime}</MDBCardSubTitle>
+                                        <MDBCardSubTitle style={{ 'marginBottom': '5px' }}>Ticket Price : {showtimelist.ticketprice}</MDBCardSubTitle>
                                         <label for="seat">Seat No : </label>
-                                        <input type='text' className="form-control" name='seat'></input>
-                                        <button type="submit">Book now</button>
+                                        <input style={{'marginBottom': '20px'}} type='text' className="form-control" name='seat'></input>
+                                        <button style={{'marginLeft': '40%'}} className="btn btn-warning" type="submit">Book now</button>
                                     </MDBCardBody>
                                 </MDBCard>
                             </MDBCol>

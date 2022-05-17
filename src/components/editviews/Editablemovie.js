@@ -14,16 +14,15 @@ const Editablemovie = ({ editMovieFormData, handleEditMovieForm, handleUpdateCan
                     onChange={handleEditMovieForm}
                 ></input>
             </td>
-            <td>
-                <textarea
-                    required="required"
+            <td style={{ 'width': '200px' }}>
+                <input
+                    type="text"
                     name="description"
                     placeholder="Change description"
-                    rows="1"
-                    cols="10"
+                    required="required"
                     value={editMovieFormData.description}
                     onChange={handleEditMovieForm}
-                ></textarea>
+                ></input>
             </td>
             <td>
                 <input
@@ -65,9 +64,9 @@ const Editablemovie = ({ editMovieFormData, handleEditMovieForm, handleUpdateCan
                     onChange={handleEditMovieForm}
                 ></input>
             </td>
-            <td>
-                <button type="submit">Update</button>
-                <button type="button" onClick={handleUpdateCancel}>Cancel</button>
+            <td style={{'marginTop':'40px'}}>
+                <button class="btn btn-warning" type="submit">Confirm</button>
+                <button class="btn btn-danger" type="button" onClick={handleUpdateCancel}>Cancel</button>
             </td>
         </tr>
     )

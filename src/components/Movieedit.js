@@ -143,13 +143,13 @@ function Movieedit(){
         <div>
             <h1 align="center">Movie information</h1>
             <form onSubmit={handleEditMovieSubmit}>
-                <table>
-                    <thead>
+                <table class="table">
+                    <thead class="table-dark">
                         <tr>
                             <th>Moviename </th>
                             <th>Description </th>
                             <th>Theme</th>
-                            <th>Director</th>
+                            <th style={{width:200}}>Director</th>
                             <th>IMDB</th>
                             <th>BannerURL</th>
                             <th>Actions</th>

@@ -18,7 +18,7 @@ import Addshowtime from './components/Addshowtime';
 import Adminpivot from './components/Adminpivot';
 import Movieedit from './components/Movieedit';
 import Movieview from './components/Movieview';
-import Showtimeview from './components/Showtimeview'; system_admin_frontend
+import Showtimeview from './components/Showtimeview'; 
 import ViewAdmin from './components/SystemAdminComponent/MovieAdmin/ViewAdmin';
 import NewUser from './components/SystemAdminComponent/NewUser';
 import MAdminlogin from './components/MAdminlogin';
