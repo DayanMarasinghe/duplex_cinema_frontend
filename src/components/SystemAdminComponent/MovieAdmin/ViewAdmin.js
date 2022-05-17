@@ -2,12 +2,18 @@ import { Component } from "react";
 import "./ViewAdmin.css"
 import { DataGrid } from '@mui/x-data-grid';
 import axios from 'axios';
+import { Table } from "react-bootstrap";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import Topbar from "../Topbar/Topbar";
+import Sidebar from "../Sidebar/Sidebar";
+
 
 class ViewAdmin extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cartItems: []
+      setAdmin: []
     }
   }
 
@@ -17,7 +23,7 @@ class ViewAdmin extends Component {
 
     axios.get(`http://localhost:4000/movieadmins/viewMovieAdmins`).then((res) => {
       console.log(res);
-      this.setState({ cartItems: res.data.cartItems })
+      this.setState({ setAdmin: res.data })
     }).catch(err => {
       console.log(err);
     })
@@ -25,29 +31,62 @@ class ViewAdmin extends Component {
 
 
   render() {
-    const { cartItems } = this.state;
+    const { setAdmin } = this.state;
     return (
+      <div>
+        <Topbar />
+        <div className="containers">
+          <Sidebar />
+          <div className="others">
+            <div className="containers">
+            <Table style={{backgroundColor: "white", marginTop: 20, marginLeft: 20}} striped bordered hover>
+            <thead>
+              <tr>
+                <th>First Name</th>
 
-      <div className="container">
-        {cartItems.map(cartitem => (
-          <div key={cartitem._id}>
-            <h5>{cartitem.full_name}</h5>
-            <h5>{cartitem.gender}</h5>
-            <h5>{cartitem.address}</h5>
-            <h5>{cartitem.nic}</h5>
-            <h5>{cartitem.username}</h5>
-            <h5>{cartitem.email}</h5>
-            <h5>{cartitem.password}</h5>
-            <h5>{cartitem.confirm_password}</h5>
+                <th>Address</th>
+                <th>nic</th>
+                <th>username</th>
+                <th>email</th>
+              </tr>
+            </thead>
+            <tbody>
+              {setAdmin.map(admins => (
+                <tr>
+                  <td>{admins.full_name}</td>
+
+                  <td>{admins.address}</td>
+                  <td>{admins.nic}</td>
+                  <td>{admins.username}</td>
+                  <td>{admins.email}</td>
+                </tr>
+
+              ))}
 
 
+            </tbody>
+
+            <div className="">
+              <Button variant="warning"
+                as={Link}
+                to="/newuser">
+                Register
+
+              </Button>
+            </div>
+
+          </Table>
 
 
+            </div>
           </div>
+         
 
-        ))}
 
+
+        </div>
       </div>
+
     )
   }
 
@@ -55,3 +94,5 @@ class ViewAdmin extends Component {
 }
 
 export default ViewAdmin
+
+

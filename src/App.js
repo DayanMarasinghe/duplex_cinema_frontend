@@ -13,14 +13,16 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import logo from './assets/duplex.png';
 import MovieadminDashboard from './components/Movieadmindashboard';
 import  Addmovie  from './components/Addmovies';
-//import systemAdminDashboard from './components/SystemAdminComponent/SystemAdminDashboard';
 import SystemAdminDashboard from './components/SystemAdminComponent/SystemAdminDashboard';
 import Addshowtime from './components/Addshowtime';
 import Adminpivot from './components/Adminpivot';
 import Movieedit from './components/Movieedit';
 import Movieview from './components/Movieview';
 import Showtimeview from './components/Showtimeview';
+import ViewAdmin from './components/SystemAdminComponent/MovieAdmin/ViewAdmin';
+import NewUser from './components/SystemAdminComponent/NewUser';
 
+  
 function App() {
   return (
     <div className="App">
@@ -63,6 +65,9 @@ function App() {
             <Route path="/movieedit" element={<Movieedit></Movieedit>}></Route>
             <Route path='/movieview' element={<Movieview></Movieview>}></Route>
             <Route path='/showtimes' element={<Showtimeview></Showtimeview>}></Route>
+            <Route path='/viewadmin' element={<ViewAdmin></ViewAdmin>}></Route> 
+            
+            <Route path='/newuser' element={<NewUser></NewUser>}></Route>  
           </Routes>
         
       
