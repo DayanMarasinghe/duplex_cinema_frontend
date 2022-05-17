@@ -28,6 +28,7 @@ class Addmovie extends Component{
         .then(response => {
             console.log(response);
             alert('Movie added successfully!');
+            window.location.href = '/movieedit'
         })
         .catch(error => {
             console.error(error);

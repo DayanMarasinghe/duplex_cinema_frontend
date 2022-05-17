@@ -27,6 +27,7 @@ class Addshowtime extends Component{
             .then(response => {
                 console.log(response);
                 alert('Movie showtime added successfully!');
+                window.location.href = '/movieadmindashboard'
             })
             .catch(error => {
                 console.error(error);

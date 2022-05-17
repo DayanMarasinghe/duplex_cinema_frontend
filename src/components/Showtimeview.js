@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {useLocation} from 'react-router-dom'
+import { MDBCard, MDBCardBody , MDBCardTitle, MDBRow, MDBCol, MDBCardSubTitle} from 'mdb-react-ui-kit';
 
 function Showtimeview(){
 
@@ -22,36 +23,25 @@ function Showtimeview(){
     return(
         <div>
             <h1>{moviename} showtimes</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <td>Theater</td>
-                        <td>Date</td>
-                        <td>Showtime</td>
-                        <td>Price</td>
-                        <td>Seat no</td>
-                        <td>Book now</td>
-                    </tr>
-                </thead>
-                <tbody>
+            <MDBRow className="row-cols-1 row-cols-md-3 g-4">
                     {
                         showtimes.map((showtimelist) => (
-                            <tr>
-                                <td>{showtimelist.theater}</td>
-                                <td>{showtimelist.date}</td>
-                                <td>{showtimelist.showtime}</td>
-                                <td>{showtimelist.ticketprice}</td>
-                                <td>
-                                    <input type='text' className="form-control" name='seat'></input>
-                                </td>
-                                <td>
-                                    <button type="submit">Book now</button>
-                                </td>
-                            </tr>
+                            <MDBCol>
+                                <MDBCard className="h-100" key={showtimelist._id}>
+                                    <MDBCardBody>
+                                        <MDBCardTitle>{showtimelist.theater} Theater</MDBCardTitle>
+                                        <MDBCardSubTitle>Date : {showtimelist.date}</MDBCardSubTitle>
+                                        <MDBCardSubTitle>Showtime : {showtimelist.showtime}</MDBCardSubTitle>
+                                        <MDBCardSubTitle>Ticket Price : {showtimelist.ticketprice}</MDBCardSubTitle>
+                                        <label for="seat">Seat No : </label>
+                                        <input type='text' className="form-control" name='seat'></input>
+                                        <button type="submit">Book now</button>
+                                    </MDBCardBody>
+                                </MDBCard>
+                            </MDBCol>
                         ))
                     }
-                </tbody>
-            </table>
+            </MDBRow>
         </div>
     )
 }

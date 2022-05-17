@@ -18,9 +18,11 @@ import Addshowtime from './components/Addshowtime';
 import Adminpivot from './components/Adminpivot';
 import Movieedit from './components/Movieedit';
 import Movieview from './components/Movieview';
-import Showtimeview from './components/Showtimeview';
+import Showtimeview from './components/Showtimeview'; system_admin_frontend
 import ViewAdmin from './components/SystemAdminComponent/MovieAdmin/ViewAdmin';
 import NewUser from './components/SystemAdminComponent/NewUser';
+import MAdminlogin from './components/MAdminlogin';
+
 
   
 function App() {
@@ -68,6 +70,7 @@ function App() {
             <Route path='/viewadmin' element={<ViewAdmin></ViewAdmin>}></Route> 
             
             <Route path='/newuser' element={<NewUser></NewUser>}></Route>  
+            <Route path='/madminlogin' element={<MAdminlogin></MAdminlogin>}></Route>
           </Routes>
         
       
