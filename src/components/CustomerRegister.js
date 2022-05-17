@@ -52,7 +52,7 @@ clearAll = () => {
                 </div>
                 <div class="form-group">
                     <label for="email">Email address</label>
-                    <input type='text' class="form-control" name='email' value={email} onChange={this.handleChange} required></input>
+                    <input type='email' class="form-control" name='email' value={email} onChange={this.handleChange} required aria-describedby="emailHelp"></input>
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone</label>
