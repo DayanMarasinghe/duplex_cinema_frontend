@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import { MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBCardSubTitle } from 'mdb-react-ui-kit';
 import { Link } from "react-router-dom";
-import {Button} from 'react-bootstrap';
+import {Button, Spinner} from 'react-bootstrap';
 
 class Home extends Component{
 
@@ -27,8 +27,10 @@ class Home extends Component{
     render(){
         const {DataisLoaded, movies} = this.state;
 
-        if(!DataisLoaded) return <div>
-        <h1>Please wait.................</h1></div>;
+        if(!DataisLoaded) return 
+        <div>
+            <Spinner animation="grow" variant="dark" />
+        </div>;
 
         return(
             <div className="App">
@@ -43,11 +45,11 @@ class Home extends Component{
                                             position="top"
                                         ></MDBCardImage>
                                         <MDBCardBody>
-                                            <MDBCardTitle>{movielist.name}</MDBCardTitle>
-                                            <MDBCardText>{movielist.description}</MDBCardText>
-                                            <MDBCardSubTitle>Theme : {movielist.theme}</MDBCardSubTitle>
-                                            <MDBCardSubTitle>Movie by : {movielist.director}</MDBCardSubTitle>
-                                            <MDBCardSubTitle>IMDB : {movielist.imdb}/10</MDBCardSubTitle>
+                                            <MDBCardTitle style={{ 'marginBottom': '12px' }}><b>{movielist.name}</b></MDBCardTitle>
+                                            <MDBCardText style={{ 'marginBottom': '8px' }}>{movielist.description}</MDBCardText>
+                                            <MDBCardSubTitle style={{ 'marginBottom': '8px' }}>Theme : {movielist.theme}</MDBCardSubTitle>
+                                            <MDBCardSubTitle style={{ 'marginBottom': '8px' }}>Movie by : {movielist.director}</MDBCardSubTitle>
+                                            <MDBCardSubTitle style={{ 'marginBottom': '20px' }}>IMDB : {movielist.imdb}/10</MDBCardSubTitle>
                                             <Button variant="warning"
                                                 as={Link}
                                                 to="/userlogin">

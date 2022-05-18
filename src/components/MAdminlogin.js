@@ -36,18 +36,21 @@ class MAdminlogin extends Component {
         const {email, password} = this.state;
 
         return(
-            <div className="container">
+            <div className="container" style={{ width: 500 , borderBlockStyle: "solid", borderLeftStyle: "solid", borderRightStyle:"solid" , marginTop: 10, borderBlockWidth: "thin", borderLeftWidth:"thin", borderRightWidth:"thin"}}>
+                <br></br>
+                <h3 style={{paddingLeft: 65}}>Please enter your credentials</h3>
                 <form onSubmit={this.handleSubmit}>
                     <div class="form-group">
                         <label for="email">Email: </label>
                         <input type='text' className="form-control" name='email' value={email} onChange={this.handleChange} required></input>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" style={{ 'marginBottom': '20px' }}>
                         <label for="password">Password: </label>
                         <input type='password' className="form-control" name='password' value={password} onChange={this.handleChange} required></input>
                     </div>
-                    <button type="submit" class="btn btn-primary">Log In</button>
+                    <button type="submit" class="btn btn-warning">Log In</button>
                 </form>
+                <br></br>
             </div>
         )
     }
