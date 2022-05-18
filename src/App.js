@@ -18,15 +18,20 @@ import Addshowtime from './components/Addshowtime';
 import Adminpivot from './components/Adminpivot';
 import Movieedit from './components/Movieedit';
 import Movieview from './components/Movieview';
-import Showtimeview from './components/Showtimeview'; system_admin_frontend
+import Showtimeview from './components/Showtimeview'; 
 import ViewAdmin from './components/SystemAdminComponent/MovieAdmin/ViewAdmin';
 import NewUser from './components/SystemAdminComponent/NewUser';
 import MAdminlogin from './components/MAdminlogin';
 
 
+
   
 function App() {
+
+
+
   return (
+
     <div className="App">
     
       <Router>
@@ -45,6 +50,9 @@ function App() {
               </Nav.Link>
               <Nav.Link as={Link} to="/cart">
                 Cart
+              </Nav.Link>
+              <Nav.Link onClick={()=>{ localStorage.clear();window.location.href ='/'}} >
+                Logout
               </Nav.Link>
             </Nav>
           </Container>
