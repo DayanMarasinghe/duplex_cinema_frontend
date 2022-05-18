@@ -131,9 +131,9 @@ class NewUser extends Component {
                     <button type="submit" class="btn btn-danger" style={{ width: 200 }} onClick={() => this.clearAll()}>Clear All</button> */}
                                 </form>
                                 <ReactNotifications />
-
+                    
                                 <div className="buttons">
-                                        <button className="newUserButton"  type="submit">Create</button>
+                                        <button className="newUserButton"  variant="warning" type="submit">Create</button>
                                         
                                         <button id="clearbtn" className="newUserButton" type="submit" onClick={() => this.getNotified()}>Clear
 

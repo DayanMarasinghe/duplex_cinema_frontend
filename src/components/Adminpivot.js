@@ -16,7 +16,7 @@ class Adminpivot extends Component{
                             <Card.Text>
                                 Login as System admin
                             </Card.Text>
-                            <Card.Link as={Link} to="/#">Login</Card.Link>
+                            <Card.Link as={Link} to="/sysadminlogin">Login</Card.Link>
                         </Card.Body>
                     </Card>
                     <Card class="card" style={{ width: '18rem' }}>

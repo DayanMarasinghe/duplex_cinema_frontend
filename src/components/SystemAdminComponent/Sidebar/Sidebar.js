@@ -12,9 +12,9 @@ class Sidebar extends Component {
             <div  className="sidebar">
                 <div className="sidebarWrapper">
                     <div className="sidebarMenu">
-                        <h4 className="sidebarTitle">Dashboard</h4>
+                        <h4 className="sidebarTitle"></h4>
                             <ul className="sidebarList">
-                                <li className="sidebarListItem">
+                                <li   className="sidebarListItem">
                                     <AccountBoxIcon/>
                                     Account
                                 </li>
