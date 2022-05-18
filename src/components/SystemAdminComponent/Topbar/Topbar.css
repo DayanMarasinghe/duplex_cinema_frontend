@@ -42,11 +42,11 @@
 }
   
   .logo {
-    font-weight: bold;
-    font-size: 30px;
+    
+    font-size: 25px;
     color: #ffc107;
     cursor: pointer;
-    margin-right: 10px;
+    
   }
   
   .topRight{

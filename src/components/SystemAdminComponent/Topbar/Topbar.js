@@ -3,6 +3,7 @@ import './Topbar.css'
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import LanguageIcon from '@mui/icons-material/Language';
 import SettingsIcon from '@mui/icons-material/Settings';
+import SearchPage from "../SearchAdmin";
 
 
 
@@ -10,11 +11,12 @@ class Topbar extends Component {
     render() {
         return (
             <div className='topbar'>
-                <div className='topbarWrapper'>
+                <div className='topbarWrapper'> 
                     <div className='topLeft'>
-                        <span className='logo'>SYSTEM ADMIN</span>
+                        <span className='logo'> ADMIN DASHBOARD</span>
                     </div>
                     <div className='topRight'>
+                       
                         <div className="topbarIconContainer">
                             <NotificationsActiveIcon />
                         </div>
@@ -25,7 +27,9 @@ class Topbar extends Component {
                         <div className="topbarIconContainer">
                             <SettingsIcon />
                         </div>
-                        <img src='https://images.medindia.net/amp-images/beauty/skin-care-tips-for-working-women.jpg' alt='' className='topAvatar' />
+
+                        
+                        {/* <img src='https://images.medindia.net/amp-images/beauty/skin-care-tips-for-working-women.jpg' alt='' className='topAvatar' /> */}
                     </div>
                 </div>
                 

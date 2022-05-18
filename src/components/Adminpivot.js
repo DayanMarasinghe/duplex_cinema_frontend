@@ -10,6 +10,27 @@ class Adminpivot extends Component{
 
     render(){
         return(
+            <div>
+                <CardGroup>
+                    <Card class="card" style={{ width: '18rem' }}>
+                        <Card.Body>
+                            <Card.Title>System Admins</Card.Title>
+                            <Card.Text>
+                                Login as System admin
+                            </Card.Text>
+                            <Card.Link as={Link} to="/sysadminlogin">Login</Card.Link>
+                        </Card.Body>
+                    </Card>
+                    <Card class="card" style={{ width: '18rem' }}>
+                        <Card.Body>
+                            <Card.Title>Movie Admins</Card.Title>
+                            <Card.Text>
+                                Login as Movie admin
+                            </Card.Text>
+                            <Card.Link as={Link} to="/madminlogin">Login</Card.Link>
+                        </Card.Body>
+                    </Card>
+                </CardGroup>
             <div style={{ 'display': 'flex', 'paddingLeft': '25%' }}>
                 <div class="card" style={{ 'width': '30%' }}>
                     <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
