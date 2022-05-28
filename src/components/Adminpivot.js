@@ -14,35 +14,26 @@ class Adminpivot extends Component{
                 <div class="card" style={{ 'width': '30%' }}>
                     <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                         <img src={sysadmin} class="img-fluid" />
-                        <a href="#!">
+                        <a href="/sadminlogin">
                             <div class="mask" style={{ 'background-color': 'rgba(251, 251, 251, 0.15)' }}></div>
                         </a>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title" style={{'paddingTop' : '7%'}}>System Admins</h5>
-                        <p class="card-text">Login as System admin</p>
-                        <Button variant="warning"
-                            as={Link}
-                            to="/#">
-                            Log In
-                        </Button>
-                    </div>
-                </div>
-                <div class="card" style={{'width':'30%'}}>
-                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                        <img src={movieadmin} class="img-fluid" style={{'height':'90%', 'width': '100%'}} />
-                        <a href="#!">
-                            <div class="mask" style={{'background-color': 'rgba(251, 251, 251, 0.15)'}}></div>
-                        </a>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Movie Admins</h5>
-                        <p class="card-text">Login as Movie admin</p>
-                        <Button variant="warning"
-                            as={Link}
-                            to="/madminlogin">
-                            Log In
-                        </Button>
+                    <div class="card" style={{'width':'30%'}}>
+                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <img src={movieadmin} class="img-fluid" style={{'height':'90%', 'width': '100%'}} />
+                            <a href="#!">
+                                <div class="mask" style={{'background-color': 'rgba(251, 251, 251, 0.15)'}}></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Movie Admins</h5>
+                            <p class="card-text">Login as Movie admin</p>
+                            <Button variant="warning"
+                                as={Link}
+                                to="/madminlogin">
+                                Log In
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </div>
