@@ -10,45 +10,13 @@ class Adminpivot extends Component{
 
     render(){
         return(
-            <div>
-                <CardGroup>
-                    <Card class="card" style={{ width: '18rem' }}>
-                        <Card.Body>
-                            <Card.Title>System Admins</Card.Title>
-                            <Card.Text>
-                                Login as System admin
-                            </Card.Text>
-                            <Card.Link as={Link} to="/sadminlogin">Login</Card.Link>
-                        </Card.Body>
-                    </Card>
-                    <Card class="card" style={{ width: '18rem' }}>
-                        <Card.Body>
-                            <Card.Title>Movie Admins</Card.Title>
-                            <Card.Text>
-                                Login as Movie admin
-                            </Card.Text>
-                            <Card.Link as={Link} to="/madminlogin">Login</Card.Link>
-                        </Card.Body>
-                    </Card>
-                </CardGroup>
-            
-                <div style={{ 'display': 'flex', 'paddingLeft': '25%' }}>
-                    <div class="card" style={{ 'width': '30%' }}>
-                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                            <img src={sysadmin} class="img-fluid" />
-                            <a href="#!">
-                                <div class="mask" style={{ 'background-color': 'rgba(251, 251, 251, 0.15)' }}></div>
-                            </a>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title" style={{'paddingTop' : '7%'}}>System Admins</h5>
-                            <p class="card-text">Login as System admin</p>
-                            <Button variant="warning"
-                                as={Link}
-                                to="/#">
-                                Log In
-                            </Button>
-                        </div>
+            <div style={{ 'display': 'flex', 'paddingLeft': '25%' }}>
+                <div class="card" style={{ 'width': '30%' }}>
+                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                        <img src={sysadmin} class="img-fluid" />
+                        <a href="/sadminlogin">
+                            <div class="mask" style={{ 'background-color': 'rgba(251, 251, 251, 0.15)' }}></div>
+                        </a>
                     </div>
                     <div class="card" style={{'width':'30%'}}>
                         <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">

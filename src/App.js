@@ -31,6 +31,7 @@ import MAdminEdit from "./components/SystemAdmin/MAdminEdit/EditAdmin";
 
 function App() {
   return (
+
     <div className="App">
       <Router>
         <Navbar bg="dark" variant="dark" sticky="top">
@@ -50,6 +51,9 @@ function App() {
               </Nav.Link>
               <Nav.Link as={Link} to="/cart">
                 Cart
+              </Nav.Link>
+              <Nav.Link onClick={()=>{ localStorage.clear();window.location.href ='/'}} >
+                Logout
               </Nav.Link>
             </Nav>
           </Container>

@@ -21,12 +21,15 @@ class CustomerLogin extends Component{
     
     handleSubmit =(e) =>{
         e.preventDefault()
+
         axios.post('http://localhost:4000/customers/login',this.state,{
 
         })
         .then(response =>{
+            console.log(response.data)
+            localStorage.setItem("userid", response.data)
             window.location.href = "/movieview"
-            console.log(response)
+
         }).catch(error=>{
             console.error(error)
             alert("Invalid credentials")
