@@ -24,12 +24,29 @@ import NewUser from './components/SystemAdminComponent/NewUser';
 import MAdminlogin from './components/MAdminlogin';
 import Login from './components/SystemAdminComponent/Login/Login';
 
+const id = localStorage.getItem("userid");
 
+function checkSession(){
+  if(id==null){
+    window.location.href = "/userlogin"
+  }else{
+    window.location.href = "/cart"
+  }
+}
 
-  
+// function login(){
+//   if(id==null){
+//     window.location.href = "/userlogin"
+//   }else{
+//     alert("You're already logged in!");
+//   }
+// }
+
+function logout(){
+  window.localStorage.clear();
+}
+
 function App() {
-
-
 
   return (
 
@@ -46,13 +63,19 @@ function App() {
               <Nav.Link as={Link} to="/userlogin">
                 Login
               </Nav.Link>
+              {/* <Nav.Link onClick={login}>
+                Login
+              </Nav.Link> */}
               <Nav.Link as={Link} to="/usersignup">
                 Sign up
               </Nav.Link>
-              <Nav.Link as={Link} to="/cart">
+              {/* <Nav.Link as={Link} to="/cart">
+                Cart
+              </Nav.Link> */}
+              <Nav.Link onClick={checkSession}>
                 Cart
               </Nav.Link>
-              <Nav.Link onClick={()=>{ localStorage.clear();window.location.href ='/'}} >
+              <Nav.Link onClick={logout} as={Link} to="/">
                 Logout
               </Nav.Link>
             </Nav>
@@ -101,20 +124,6 @@ function App() {
                       as={Link}
                       to="/adminpivot">
                       Login as Admin
-                    </Button>
-                    <Button variant="warning"
-                      as={Link}
-                      to="/movieview">
-                      Movie view
-                    </Button>
-                </div>
-
-                <div class="widget no-box">
-                  <h5 class="widget-title">Admin Portal<span></span></h5>
-                    <Button variant="warning"
-                      as={Link}
-                      to="/systemadmindashboard">
-                      System Admin Dashboard
                     </Button>
                 </div>
                 

@@ -1,23 +1,26 @@
 import React, { useEffect, useState } from "react";
 import {useLocation} from 'react-router-dom'
 import { MDBCard, MDBCardBody , MDBCardTitle, MDBRow, MDBCol, MDBCardSubTitle} from 'mdb-react-ui-kit';
+import axios from "axios";
 
 function Showtimeview(){
 
     //for passed moviename
     const location = useLocation()
     const { moviename } = location.state
+    const id = localStorage.getItem("userid");
 
     //viewing the movie showtimes
     const [showtimes, setShowtimes] = useState([]);
 
     const [postTicketInfo, setPostTicketInfo]= useState({
+        userID:'',
         moviename: '',
-        theater: '',
+        theatre: '',
         date: '',
-        showtime: '', 
+        time: '', 
         price: '',
-        seatNo: '',
+        seat: '',
     });
 
     useEffect(() => {
@@ -30,13 +33,14 @@ function Showtimeview(){
     },[])
 
     //handle the change on seatno
-    const handleSeatChange = (event, showtimelist, moviename) => {
+    const handleSeatChange = (event, showtimelist, moviename, id) => {
 
         const postCart = {
+            userID: id,
             moviename: moviename.moviename,
-            theater: showtimelist.theater,
+            theatre: showtimelist.theater,
             date: showtimelist.date,
-            showtime: showtimelist.showtime,
+            time: showtimelist.showtime,
             price: showtimelist.ticketprice,
             [event.target.name]: event.target.value
         }
@@ -47,8 +51,15 @@ function Showtimeview(){
     //submit form
     const handleSubmit = (event) =>{
         event.preventDefault();
+        axios.post('http://localhost:4000/carts',postTicketInfo,{
 
-        console.log(postTicketInfo)
+        })
+        .then(response =>{
+            alert("Added to cart")
+            console.log(response)
+            window.location.reload(false);
+        })
+        // console.log(postTicketInfo)
     }
 
     return(
@@ -66,7 +77,7 @@ function Showtimeview(){
                                         <MDBCardSubTitle style={{ 'marginBottom': '5px' }}>Showtime : {showtimelist.showtime}</MDBCardSubTitle>
                                         <MDBCardSubTitle style={{ 'marginBottom': '5px' }}>Ticket Price : {showtimelist.ticketprice}</MDBCardSubTitle>
                                         <label for="seat">Seat No : </label>
-                                        <input style={{ 'marginBottom': '20px' }} type='text' className="form-control" name='seat' onChange={(event) => handleSeatChange(event, showtimelist, { moviename })}></input>
+                                        <input style={{ 'marginBottom': '20px' }} type='text' className="form-control" name='seat' onChange={(event) => handleSeatChange(event, showtimelist, { moviename }, id)}></input>
                                         <button style={{ 'marginLeft': '40%' }} className="btn btn-warning" type="submit">Book now</button>
                                     </MDBCardBody>
                                 </MDBCard>
